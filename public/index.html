@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Ropa+Sans" rel="stylesheet">
+
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Form</title>
+</head>
+
+<body>
+
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">Forms + MongoDB</a>
+    </div>
+  </nav>
+  <br/>
+  <main>
+    <div class="container content">
+
+      <ul class="collapsible popout" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">expand_more</i>Learn Why I Built This</div>
+          <div class="collapsible-body">
+            <span>Showcasing some of my knowledge on MongoDB, APIs, and form building! I believe that actually creating apps that
+              employers wonder if you can do for them is a huge bonus!</span>
+          </div>
+        </li>
+      </ul>
+      <br/>
+      <form class="col s6 " id="nameForm" method="post" action="/post-user">
+        <ul id="staggered-test">
+          <li>
+            <div class="row ">
+              <div class="input-field scale-transition">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" name="firstName">
+                <label for="icon_prefix">First Name</label>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="input-field scale-transition">
+                <i class="material-icons prefix">email</i>
+                <input id="icon_email" type="text" name="email">
+                <label for="icon_email">Email</label>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class='row '>
+              <div class='input-field scale-transition'>
+                <i class='material-icons prefix'>vpn_key</i>
+                <input id='pass1' type='password' name="password">
+                <label for='icon_prefix'>Enter Fake Password</label>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class='row'>
+              <div class='input-field scale-transition'>
+                <i class='material-icons prefix'>tag_faces</i>
+                <input id='pass2' type='password' name="password2">
+                <label for='icon_email'>Repeat Fake Password</label>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button id="formBtn" class="btn waves-effect waves-light hvr-float-shadow" type="submit" value='Submit'>Submit
+              <i class="material-icons right">send</i>
+            </button>
+            <div class="right">
+
+              <a href="/view-users" class="btn waves-effect waves-light hvr-float-shadow">View Api</a>
+              <a href="/clear-data" id="clear" class="btn waves-effect waves-light hvr-float-shadow">Clear Database</a>
+            </div>
+          </li>
+      </form>
+
+      </ul>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Test it out!</h5>
+          <hr>
+          <p class="grey-text text-lighten-4">Insert fake infomation into form and hit submit. Check out the API to view the database and clear the data.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://jarongallo.herokuapp.com/">Portfolio</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/JaronGallo/formsWithMongo">View this apps code</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/JaronGallo">Github</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/jarongallo/">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script type="text/javascript" src="form.js"></script>
+
+
+</body>
+
+</html>
