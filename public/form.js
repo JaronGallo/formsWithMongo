@@ -96,6 +96,10 @@ else if(pass1.length <= 6) {
 	$('#icon_email').val('');
 	$('#pass1').val('');
 	$('#pass2').val('');
+	$("#switchName").removeClass('active');
+	$("#switchEmail").removeClass('active');
+	$("#switchPass1").removeClass('active');
+	$("#switchPass2").removeClass('active');
 	
 }
 
