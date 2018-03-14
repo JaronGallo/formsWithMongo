@@ -31,6 +31,7 @@ app.post('/post-user', function (req, res) {
       // If an error occurs, send the error to the client
       if(err.errors){
           console.log(err.errors);
+          location.reload();
       
     }
       

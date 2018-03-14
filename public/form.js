@@ -49,18 +49,26 @@ pass2 = $('#pass2').val().trim();
 
 
  if (name ==='') {
- 	Materialize.toast("Name not entered", 3000, 'rounded');
+	 Materialize.toast("Name not entered", 3000, 'rounded');
+	 	event.preventDefault();
+
  	return;
  } else if(email ===''){
- 	Materialize.toast("Not a vaild email address", 3000, 'rounded');
+	 Materialize.toast("Not a vaild email address", 3000, 'rounded');
+	 	event.preventDefault();
+
  	return;
  } 
  else if(! email.includes("@")){
- 	Materialize.toast("Not a vaild email address", 3000, 'rounded');
+	 Materialize.toast("Not a vaild email address", 3000, 'rounded');
+	 	event.preventDefault();
+
  	return;
  }
   else if(! email.includes(".")){
-  	Materialize.toast("Not a vaild email address", 3000, 'rounded');
+	  Materialize.toast("Not a vaild email address", 3000, 'rounded');
+	  	event.preventDefault();
+
  	return;
  }
  else {
