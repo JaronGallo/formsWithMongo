@@ -25,13 +25,13 @@ app.post('/post-user', function (req, res) {
     .then(function(dbUser) {
       // If saved successfully, send the the new User document to the client
     //   res.json(dbUser);
-    location.reload();
+    
 })
     .catch(function(err) {
       // If an error occurs, send the error to the client
       if(err.errors){
           console.log(err.errors);
-          location.reload();
+          
       
     }
       

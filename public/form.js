@@ -77,22 +77,28 @@ pass2 = $('#pass2').val().trim();
 
 if(pass1 != pass2){
 	Materialize.toast("Password does not match", 3000, 'rounded');
+	event.preventDefault();
 } else if(pass1==="") {
 	Materialize.toast("Password not entered", 3000, 'rounded');
-	return;
-
-} else {
-	Materialize.toast("You are now entered in the database", 3000, 'rounded');
+	event.preventDefault();
 	
+
+} 
+else if(pass1.length <= 6) {
+	Materialize.toast("Password needs to be 6 characters", 3000, 'rounded');
+	event.preventDefault();
+	
+
+}else {
+	Materialize.toast("You are now entered in the database", 3000, 'rounded');
+	event.preventDefault();
 }
 
 
 
 	}); 
 
-post = () => {
-// $('#staggered-test').html("<h1>Thank you!</h1>");
-}
+
   });
 
 
