@@ -36,6 +36,11 @@ test = () => {
 		}
 	});
 });
+
+post = () => {
+	
+		location.reload("/");
+};
 // button api post
 $('#formBtn').on('click', function(){
 	// event.preventDefault();
@@ -91,15 +96,7 @@ else if(pass1.length <= 6) {
 
 }else {
 	Materialize.toast("You are now entered in the database", 3000, 'rounded');
-	$('#icon_prefix').val('');
-	$('#icon_email').val('');
-	$('#pass1').val('');
-	$('#pass2').val('');
-	$("#switchName").removeClass('active');
-	$("#switchEmail").removeClass('active');
-	$("#switchPass1").removeClass('active');
-	$("#switchPass2").removeClass('active');
-	
+	setTimeout(post,1000);
 }
 
 
