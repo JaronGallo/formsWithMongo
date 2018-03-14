@@ -4,7 +4,15 @@ var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var PORT = process.env.PORT || 3000;
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/Ui');
+
+const databaseUri = 'mongodb://localhost/Ui';
+
+if (process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI);
+} else {
+    mongoose.connect(databaseUri);
+}
+
 var User = require("./userModel.js");
 var app = express();
 app.use(express.static(__dirname + '/public'));
