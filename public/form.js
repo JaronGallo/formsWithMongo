@@ -91,7 +91,6 @@ else if(pass1.length <= 6) {
 
 }else {
 	Materialize.toast("You are now entered in the database", 3000, 'rounded');
-	event.preventDefault();
 	$('#icon_prefix').val('');
 	$('#icon_email').val('');
 	$('#pass1').val('');
