@@ -41,7 +41,7 @@ app.post('/post-user', function (req, res) {
 app.get('/view-users',  function(req, res) {
     
     User.find({}).sort('-date').exec(function(err, users) {
-        return res.end(JSON.stringify(users), null, 4);
+        return res.end(JSON.stringify(users, null, 4));
     });
 });
 
