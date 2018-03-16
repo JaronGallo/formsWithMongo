@@ -18,7 +18,7 @@ Materialize.scrollFire(options);
 
 
 test = () => {
-	Materialize.toast(`Welcome ${name}!`, 3000, 'rounded');
+	
 	
 	};
 	$('#clear').on('click', function(){
@@ -90,7 +90,7 @@ if(pass1 != pass2){
 
 } 
 else if(pass1.length <= 6) {
-	Materialize.toast("Password needs to be 6 characters", 3000, 'rounded');
+	Materialize.toast("Password needs to be 7 characters", 3000, 'rounded');
 	event.preventDefault();
 	
 

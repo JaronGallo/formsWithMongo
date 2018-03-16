@@ -25,7 +25,7 @@ app.post('/post-user', function (req, res) {
     .then(function(dbUser) {
       // If saved successfully, send the the new User document to the client
         console.log("data sent!");
-        mongoose.disconnect();
+        
 })
     .catch(function(err) {
       // If an error occurs, send the error to the client
@@ -39,38 +39,16 @@ app.post('/post-user', function (req, res) {
 });
 
 app.get('/view-users',  function(req, res) {
-    if (process.env.MONGODB_URI) {
-        mongoose.connect(process.env.MONGODB_URI);
-        User.find({}).sort('-date').exec(function(err, users) {
-            return res.end(JSON.stringify(users));
-        });
-    } else {
-        mongoose.connect(databaseUri);
-        User.find({}).sort('-date').exec(function(err, users) {
-            return res.end(JSON.stringify(users));
-        });
-    }
     
-    
-    
+    User.find({}).sort('-date').exec(function(err, users) {
+        return res.end(JSON.stringify(users), null, 4);
+    });
 });
 
 app.delete('/clear-data',  function(req, res) {
-    if (process.env.MONGODB_URI) {
-        mongoose.connect(process.env.MONGODB_URI);
-        User.remove({}).exec(function(err, users) {
-            return res.send("Data Deleted");
-        });
-
-    } else {
-        mongoose.connect(databaseUri);
-        User.remove({}).exec(function(err, users) {
-            return res.send("Data Deleted");
-        });
-    }
-    
-   
-   
+    User.remove({}).exec(function(err, users) {
+        return res.send("Data Deleted");
+    });
 });
 app.listen(PORT, function() {
     console.log("App running on port " + PORT + "!");
