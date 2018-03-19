@@ -141,6 +141,13 @@ darkslategrey;
   padding:10px;
   padding-bottom:3em; 
 }
+.page-footer {
+  
+  height:26em;   
+  /* Height of the footer */
+
+
+}
 
 }
 @media (max-width: 600px){
