@@ -12,7 +12,9 @@ This code showcases my ability to grab submited form data and save it to a **dat
 
 **Post Route**
 
-Using express.js and mongoose.js to handle the submit button posting the data.
+Using **express.js** and **mongoose.js** to handle the submit button posting the data.
+Before this could work I needed to create a schema for the form to use to make sure the user sends valid data.
+**You can view the schema** [Here](https://github.com/JaronGallo/formsWithMongo/blob/master/userModel.js)
 
 ```javascript
 app.post('/post-user', function (req, res) {
