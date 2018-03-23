@@ -14,7 +14,8 @@ This code showcases my ability to grab submited form data and save it to a **dat
 
 Using **express.js** and **mongoose.js** to handle the submit button posting the data.
 Before this could work I needed to create a schema for the form to use to make sure the user sends valid data.
-**You can view the schema** [Here](https://github.com/JaronGallo/formsWithMongo/blob/master/userModel.js)
+
+**You can view the schema** [Here](https://github.com/JaronGallo/formsWithMongo/blob/master/userModel.js)!
 
 ```javascript
 app.post('/post-user', function (req, res) {
@@ -28,6 +29,25 @@ app.post('/post-user', function (req, res) {
       if(err.errors){
           console.log(err.errors);
     }
+    });
+});
+```
+**Get Route**(To view database)
+
+```javascript
+app.get('/view-users',  function(req, res) {
+    User.find({}).sort('-date').exec(function(err, users) {
+        return res.end(JSON.stringify(users, null, 4));
+    });
+});
+```
+
+**Delete Route**
+
+```javascript
+app.delete('/clear-data',  function(req, res) {
+    User.remove({}).exec(function(err, users) {
+        return res.send("Data Deleted");
     });
 });
 ```
