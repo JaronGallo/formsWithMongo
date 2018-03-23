@@ -1,5 +1,5 @@
 # formsWithMongo
-[Link to Code Website](https://desolate-sea-56537.herokuapp.com/)
+[Link to App](https://desolate-sea-56537.herokuapp.com/)
 
 [Link to my Portfolio](http://jarongallo.herokuapp.com/)
 
