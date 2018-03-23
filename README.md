@@ -6,6 +6,18 @@
 ## Info 
 This code showcases my ability to grab submited form data and save it to a **database like MongoDb**! I created an Api where you can view the data saved and also delete data from database.
 
+## Packages and Lanaguages Used
+1. **HTML**
+2. **CSS**
+3. **ES6 JavaScript**
+4. **Node.js**
+5. **MongoDb** (Database)
+6. **Mongoose.js**
+7. **Express.js**
+8. **mongo.js**
+9. **Materialize** (CSS Framework)
+10. **Media Queries** (Mobile Responsiveness)
+
 ## Code Examples
 
 ### Routes for API 
